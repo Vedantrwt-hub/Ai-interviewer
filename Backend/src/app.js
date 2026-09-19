@@ -9,7 +9,7 @@ app.use(cookieParser());
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://mern-frontend-sd94.vercel.app",
+  "https://mern-frontend-qgvg.vercel.app",
 ];
 
 app.use(
