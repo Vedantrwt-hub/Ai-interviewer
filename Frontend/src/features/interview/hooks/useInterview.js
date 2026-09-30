@@ -11,7 +11,7 @@ export function useInterview() {
   const getReports = useCallback(async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/interview/reports",
+        "https://ai-interviewer-5.onrender.com/api/interview/reports",
         {
           method: "GET",
           credentials: "include",
@@ -95,7 +95,7 @@ export function useInterview() {
         );
 
         const response = await fetch(
-          "http://localhost:3000/api/interview",
+          "https://ai-interviewer-5.onrender.com/api/interview",
           {
             method: "POST",
             credentials: "include",
@@ -197,7 +197,7 @@ export function useInterview() {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:3000/api/interview/reports/${interviewId}`,
+          `https://ai-interviewer-5.onrender.com/api/interview/reports/${interviewId}`,
           {
             method: "GET",
             credentials: "include",

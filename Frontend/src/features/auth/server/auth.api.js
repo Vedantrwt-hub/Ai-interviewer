@@ -1,54 +1,37 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://ai-interviewer-5.onrender.com",
   withCredentials: true,
 });
 
 export const register = async ({ username, email, password }) => {
-  try {
-    const response = await api.post("/api/auth/Register", {
-      username, email, password,});
+  const response = await api.post("/api/auth/Register", {
+    username,
+    email,
+    password,
+  });
 
-    return response.data;
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+  return response.data;
 };
 
 export const login = async ({ email, password }) => {
-  try {
-    const response = await api.post("/api/auth/Login", {
-      email,
-      password,
-    });
+  const response = await api.post("/api/auth/Login", {
+    email,
+    password,
+  });
 
-    return response.data;
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+  return response.data;
 };
 
 export const logout = async () => {
-  try {
-    const response = await api.get("/api/auth/Logout");
+  const response = await api.get("/api/auth/Logout");
 
-    return response.data;
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+  return response.data;
 };
 
 export const getme = async () => {
-  try {
-    const response = await api.get("/api/auth/Get-me");
+  const response = await api.get("/api/auth/Get-me");
 
-    return response.data;
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+  return response.data;
 };
